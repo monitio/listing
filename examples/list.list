@@ -1,0 +1,20 @@
+
+# "^*" is the main runtime
+# "^*.windows" runs a category if it is on windows
+# "^*.other" runs a category if it is on another unknown os
+
+$W = ^*.windows
+$O = ^*.other
+
+# the main list for the windows variable:
+{W}1 - ("sleep 1") # runs the command `sleep 1`
+{W}2 - ("ping youtube.com") # runs the command `cargo run`
+
+# the secondary list for the other variable:
+{O}1 - ("sleep 2") # runs the command `sleep 1`
+{O}2 - ("ping google.com") # runs the command `cargo run`
+
+# essentially this list wil sleep for a certain
+# amount of time (depending on the os) and then
+# ping either google.com or youtube.com (depending
+# on your os)

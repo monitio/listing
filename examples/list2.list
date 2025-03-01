@@ -1,0 +1,8 @@
+$W = ^*.windows
+$O = ^*.other
+
+{w}1 - ("sleep 1")
+{w}2 - ("ping google.com")
+
+{o}1 - ("sleep 2")
+{o}2 - ("ping youtube.com")

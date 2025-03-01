@@ -1,0 +1,12 @@
+$W = ^*.windows
+$O = ^*.other
+
+# WINDOWS:
+# rust building
+{W}1 - ("cargo build")
+{W}2 - ("del .\dist\Listing.exe >nul 2>&1 & copy .\target\debug\listing.exe .\dist\Listing.exe")
+
+# LINUX/OTHER:
+# rust building
+{O}1 - ("cargo build")
+{O}2 - ("rm -f ./dist/Listing.exe && cp ./target/debug/listing.exe ./dist/Listing.exe")
